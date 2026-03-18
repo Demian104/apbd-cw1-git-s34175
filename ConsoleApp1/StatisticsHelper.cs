@@ -65,7 +65,6 @@ public static class StatisticsHelper
 
         if (lower == upper)
             return sorted[lower];
-        // Я ебал козу
         double weight = position - lower;
         return sorted[lower] * (1 - weight) + sorted[upper] * weight;
     }
