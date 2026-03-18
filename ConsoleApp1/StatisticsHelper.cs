@@ -69,6 +69,9 @@ public static class StatisticsHelper
         double weight = position - lower;
         return sorted[lower] * (1 - weight) + sorted[upper] * weight;
     }
-    
+    public static double CalculateAverage(int[] values)
+    {
+        return 
+    }
     
 }
