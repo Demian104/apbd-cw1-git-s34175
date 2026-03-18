@@ -22,4 +22,14 @@ public static class StatisticsHelper
 
         return sorted[count / 2];
     }
+    public static double Variance(IEnumerable<double> data)
+    {
+        if (data == null || !data.Any())
+            throw new ArgumentException("Коллекция пуста");
+
+        double mean = Mean(data);
+        return data.Select(x => Math.Pow(x - mean, 2)).Average();
+    }
+
+    
 }
