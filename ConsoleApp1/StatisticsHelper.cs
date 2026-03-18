@@ -69,6 +69,12 @@ public static class StatisticsHelper
         double weight = position - lower;
         return sorted[lower] * (1 - weight) + sorted[upper] * weight;
     }
-    
+    public static int CalculateMax(int[] values)
+    {
+        if (values == null || values.Length == 0)
+            throw new ArgumentException("Массив пуст или null");
+
+        return values.Max();
+    }
     
 }
