@@ -65,6 +65,7 @@ public static class StatisticsHelper
 
         if (lower == upper)
             return sorted[lower];
+        // Я ебал козу
         double weight = position - lower;
         return sorted[lower] * (1 - weight) + sorted[upper] * weight;
     }
@@ -75,12 +76,11 @@ public static class StatisticsHelper
 
         return values.Average();
     }
-    public static int CalculateMax(int[] values)
+    public static int CalculateMin(int[] values)
     {
         if (values == null || values.Length == 0)
             throw new ArgumentException("Массив пуст или null");
 
-        return values.Max();
+        return values.Min();
     }
-    
 }
