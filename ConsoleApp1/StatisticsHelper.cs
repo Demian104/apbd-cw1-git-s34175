@@ -78,6 +78,9 @@ public static class StatisticsHelper
     }
     public static int CalculateMin(int[] values)
     {
-      
+        if (values == null || values.Length == 0)
+            throw new ArgumentException("Массив пуст или null");
+
+        return values.Min();
     }
 }
