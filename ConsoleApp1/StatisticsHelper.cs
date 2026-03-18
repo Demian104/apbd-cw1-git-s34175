@@ -76,5 +76,12 @@ public static class StatisticsHelper
 
         return values.Average();
     }
+    public static int CalculateMax(int[] values)
+    {
+        if (values == null || values.Length == 0)
+            throw new ArgumentException("Массив пуст или null");
+
+        return values.Max();
+    }
     
 }
